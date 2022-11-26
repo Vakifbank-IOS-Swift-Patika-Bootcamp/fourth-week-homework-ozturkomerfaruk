@@ -1,40 +1,59 @@
-# fourth-week-homework
+# 4. Hafta Ödevi
 
-1- https://breakingbadapi.com/  API kullanılarak bir uygulama geliştirilecektir. Aşağıda detaylar verilmiştir.
---
+<img width="260" alt="204097838-b52ece5d-f2b4-4637-93ae-ae3e08404ddd-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204100123-0155e105-8e80-411f-ae0f-8d1162b5737c.png">
 
-• Uygulama tablı yapıda olacaktır.(Açılış tabbar) ve 3 ayrı tab olacaktır.
-• Activity indicator kullanılmalıdır.
-• Alert gösterimi yapılmalıdır.
 
-## 1.Tab - Karakterler:
+## Ödev Tanımı
 
-• Bu ekranda karakterler listelenecektir.
-• CollectionViewda en az karakterin ismi, doğum günü ve takma adı olacaktır.
-• Listeden karaktere bastığımda karakter detay ekranına yönlenmelidir.
+3 tablı bir uygulamadır. 1. tabında adet 3 sayfa bulunmaktadır. 1. sayfasında karakterler listelenmektedir. Bir karakterin gerçek ismi, dizi de ismi ve takma adı listelenmektedir. Aynı zamanda karakterlerin dizide ki isimlerine göre arama da yapılabilmektedir. Bir karaktere tıklanıldığı zaman, o karaktere ait detay bilgilerinin gözükebileceği bir detay sayfası bulunmaktadır. Bu detay sayfasında karakterin; gerçek ismi, takma adı, dizide ki adı, gözüktüğü sezonlar ve son olarak, dizide ki meslekleri yer almaktadır. Sayfanın en yukarısında, karaktere ait alıntırıların olduğu 3. sayfaya gitmenin butonu yer almaktadır. Bu butona tıklanıldığında, eğer varsa o karaktere ait tüm alıntılar listelenmektedir. Eğer yoksa sayfadan geri yönlendirilmektedir.
+      
+Uygulamanın ikinci tabında Breaking Bad serisinin ve Better Call Saul dizilerinin bölümleri yer almaktadır. Bu bölümler, sezonlara göre listelenmektedir. Her bir tablonun hücresinde bölümün başlığı ve tarihi de yer almaktadır. Eğer bir bölüme tıklanılırsa, o bölümde yer alan oyuncuların listelendiği bir popup ekranı açılmaktadır.
+      
+Uygulamnın son tabında ise Breaking Bad dizisine ait bir WebView yer almaktadır. Bu WebView de IMDB sayfası gözükmektedir. Ancak uygulama içerisinde Better Call Saul dizisinin de bölümleri ve oyuncuları listelendiği için sağ üst butondan Better Call Saul dizisinin IMDB sayfasına gidilebilmektedir. Sol üst tarafta ise, benim blog sayfama gidilen bir buton yer almaktadır. Yazar imzası olması için eklediğim küçük bir buton.
 
-Karakter Detay Ekranı:
+https://user-images.githubusercontent.com/56068905/204097652-e10826f3-e277-465b-98b2-4edd6f900889.mov
 
-• Karakterin görseli ile birlikte en az 4 bilgisi yer almalıdır.
-• Ekranda bir button olmalı ve bu button karakterin sözleri(alıntıları) ekranına yönlenmelidir.
+### Network
 
-Karakterin Sözleri-Alıntıları Ekranı:
+[Breaking Bad Api](https://breakingbadapi.com/) sitesinden 4 adet EndPoint kullanılmıştır.
 
-• Ekranda karakterin sözleri-alıntıları listelenmelidir.
+* **/characters** - Karakterleri getirme
+* **/quote?author=\(author)** - Yazara göre alıntıları getirme
+* **/episodes** - Bölümleri getirme
+* **/characters?name=\(name)** - Dizide ki isme göre karakterleri harf harf getirmesi
+       
+### Design Pattern Architecture
 
-## 2.Tab - Bölümler:
+* MVC
 
-• Ekranda bölümler listelenmelidir.
-• TableViewda en az ismi ve sezonu bulunmalıdır.
-• Listeden bölüme bastığımda ekranın üstünde bir detay view açılmalıdır.(ViewController değil View olacak).
-• View üzerinde bölümdeki oyuncular yer almalı sağ üst köşede kapat butonu olmalı.
-• Kapat butonu aksiyonu delegate ile yönetilebilmelidir.(Kapata bastığımda liste ekranında print yazılması yeterlidir.)
+### Third-party Library
 
-## 3.Tab- IMDB Sayfası
- 
-• Ekranda Webview ile IMDBde dizinin sayfası açılmalıdır.
+* MaterialActivityIndicator
+* SwiftAlertView
+       
+## Sayfa Tasarımları ve Önemli Parçaları
 
-2- Clean Code - 1, 2, 3, 4 chapterlar özetlenmelidir.
---
+<img width="175" alt="Screenshot_2022-11-26_at_19 26 34-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099006-5faab988-59ca-4590-8656-c27b0897a03e.png"> <img width="175" alt="Screenshot_2022-11-26_at_19 27 29-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099010-255ce1b3-66f7-41ad-80d9-fa1112227f52.png"> <img width="173" alt="Screenshot_2022-11-26_at_19 28 47-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099013-1d4928eb-3505-439f-a3fd-e7ec52596a4e.png"> <img width="180" alt="Screenshot_2022-11-26_at_19 29 01-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099019-92032e4d-9b03-4ac6-8822-0edb1bf1cb89.png">
 
-Kolay gelsin :)
+* Collection View
+* Search Bar
+* Custom Collection View Cell
+* Collection View Flow Layout
+* Table View
+* UIImageView
+
+<img width="175" alt="Screenshot_2022-11-26_at_19 40 06-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099440-2d439182-b38f-4076-b3df-d0af6144bf42.png"> <img width="182" alt="Screenshot_2022-11-26_at_19 40 53-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099443-acc73111-f102-4206-92af-9188eb6f0aa4.png">
+
+* Table View with Section
+* XibFile (Popup View)
+* Delegate Pattern with XibFile
+* Extension String to Change Date Format
+* Table View in View
+
+<img width="176" alt="Screenshot_2022-11-26_at_19 49 12-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099855-b14b783d-910c-4506-be55-3ae7e7e1b396.png"> <img width="183" alt="Screenshot_2022-11-26_at_19 49 28-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099859-2ceb614f-86c7-4cc4-b465-62fcd30adda2.png"> <img width="179" alt="Screenshot_2022-11-26_at_19 49 47-removebg-preview" src="https://user-images.githubusercontent.com/56068905/204099862-52edd791-9342-48a9-a73a-19ec41bf5c18.png">
+
+* WebView 
+
+
+
+
