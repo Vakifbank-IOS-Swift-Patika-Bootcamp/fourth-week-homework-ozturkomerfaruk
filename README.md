@@ -22,11 +22,11 @@ https://user-images.githubusercontent.com/56068905/204097652-e10826f3-e277-465b-
 * **/episodes** - Bölümleri getirme
 * **/characters?name=\(name)** - Dizide ki isme göre karakterleri harf harf getirmesi
        
-### Design Pattern Architecture
+### Dizayn Patern Mimarisi
 
 * MVC
 
-### Third-party Library
+### 3. Parti Kütüphaneler
 
 * MaterialActivityIndicator
 * SwiftAlertView
