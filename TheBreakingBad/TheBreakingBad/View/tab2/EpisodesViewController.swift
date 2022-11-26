@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct SeasonEpisodeModel {
-    var seasonName: String
-    var episodeModelList: [EpisodeModel]
-}
-
 final class EpisodesViewController: BaseViewController {
     
     //MARK: Values
@@ -19,6 +14,7 @@ final class EpisodesViewController: BaseViewController {
     private var commercialPopup: PopUp!
     private var seasonEpisodes = [SeasonEpisodeModel]()
     
+    //seasons
     private var bd1Model: SeasonEpisodeModel?
     private var bd2Model: SeasonEpisodeModel?
     private var bd3Model: SeasonEpisodeModel?
